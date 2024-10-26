@@ -1,13 +1,13 @@
 <template>
   <div class="news-card">
-    <a :href="news.url" target="_blank">
+    <a :href="news.url" target="_blank" class="news-title">
       <img :src="news.image || defaultImage" alt="News Image" class="news-image">
     </a>
     <div class="news-content">
       <a :href="news.url" target="_blank" class="news-title">
         <h3>{{ news.title }}</h3>
       </a>
-      <div :class="['news-summary', { scrollable: isScrollable }]">
+      <div :class="['news-summary', { scrollable: isScrollable }]" @click.stop="toggleScroll">
         <p>{{ news.summary }}</p>
       </div>
       <a :href="news.url" target="_blank" class="read-more">Read more</a>
