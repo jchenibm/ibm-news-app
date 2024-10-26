@@ -2,7 +2,7 @@
 
 A simple Vue & Flask App to load and read IBM What's New articles.
 
-![[public/screenshot.png]]
+![screenshot](public/screenshot.png)
 
 ## Project setup
 ```
