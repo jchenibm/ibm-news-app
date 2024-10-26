@@ -1,5 +1,9 @@
 # ibm-news-app
 
+A simple Vue & Flask App to load and read IBM What's New articles.
+
+![[public/screenshot.png]]
+
 ## Project setup
 ```
 npm install
@@ -18,6 +22,11 @@ npm run build
 ### Lints and fixes files
 ```
 npm run lint
+```
+
+### Run back-end server
+```
+python server.py
 ```
 
 ### Customize configuration
