@@ -1,3 +1,40 @@
+"""
+This Python script sets up a Flask web application that fetches and returns news items from IBM's news page using Selenium.
+The application provides an endpoint `/news` which can be queried to retrieve a specified number of news items.
+
+### Features:
+- **Flask Web Application**: Serves as the backend API.
+- **CORS Support**: Enables cross-origin resource sharing for the entire application.
+- **Selenium WebDriver**: Used to scrape news items from IBM's news page.
+- **Dynamic News Fetching**: Allows fetching a customizable number of news items via query parameters.
+
+### Endpoints:
+- **GET /news**: Retrieves news items.
+  - Query Parameters:
+    - `size` (optional): Number of news items to fetch. Default is 10.
+
+### Usage:
+1. **Install Dependencies**:
+    ```sh
+    pip install flask flask-cors selenium
+    ```
+2. **Run the Application**:
+    ```sh
+    python app.py
+    ```
+3. **Query the Endpoint**:
+
+To fetch 10 news items:
+    ```sh
+    curl http://127.0.0.1:5000/news
+    ```
+
+To fetch 30 news items:
+    ```sh
+    curl http://127.0.0.1:5000/news?size=30
+    ```
+"""
+
 from flask import Flask, jsonify, request
 from flask_cors import CORS  # Import the CORS package
 from selenium import webdriver
